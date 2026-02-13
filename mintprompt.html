@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mintprompt - Auric LLC</title>
+    <meta name="description" content="Mintprompt: AI prompt marketplace by Auric LLC">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(108, 59, 255, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #6C3BFF;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #6C3BFF;
+        }
+
+        .product-hero {
+            padding: 9rem 2rem 5rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .product-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .product-hero p {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: rgba(34, 197, 94, 0.1);
+            color: #16a34a;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .feature-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(108, 59, 255, 0.1);
+            font-size: 1.05rem;
+            color: #333;
+        }
+
+        .feature-list li:before {
+            content: '✓';
+            color: #6C3BFF;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .ecosystem-box {
+            background: rgba(108, 59, 255, 0.05);
+            border: 1px solid rgba(108, 59, 255, 0.2);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .ecosystem-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #6C3BFF;
+        }
+
+        .ecosystem-box a {
+            color: #6C3BFF;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .ecosystem-box a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: rgba(108, 59, 255, 0.03);
+            border-top: 1px solid rgba(108, 59, 255, 0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .footer p {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .product-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Auric LLC</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="product-hero">
+        <div class="product-icon">🎨</div>
+        <h1>Mintprompt</h1>
+        <p>AI Prompt Marketplace for Creators</p>
+        <span class="status-badge">Live</span>
+    </section>
+
+    <section class="section">
+        <h2>About Mintprompt</h2>
+        <p>Mintprompt is a curated marketplace connecting AI prompt creators with buyers seeking high-quality workflows, automation templates, and creative prompts. The platform enables creators to monetize their expertise while providing users access to battle-tested prompts that work across multiple AI platforms including ChatGPT, Claude, Gemini, and custom AI implementations.</p>
+        <p>Built with a focus on quality over quantity, every prompt on Mintprompt undergoes manual review to ensure reliability and value. The platform operates on a creator-first model—sellers keep 100% of their revenue, with Auric earning through subscription fees rather than commission.</p>
+    </section>
+
+    <section class="section">
+        <h2>Purpose & Technology</h2>
+        <p>The platform addresses a critical gap in the AI ecosystem: the lack of a trusted marketplace for discovering and acquiring proven prompts. As AI adoption accelerates, the need for reliable, well-documented workflows grows exponentially.</p>
+        <p>Mintprompt leverages modern web technologies including Next.js for performance, PostgreSQL for data integrity, and Stripe for secure payment processing. The architecture prioritizes speed, security, and scalability to support growing demand.</p>
+        <ul class="feature-list">
+            <li>Manual quality review for all submissions</li>
+            <li>Creator-friendly revenue model (100% to sellers)</li>
+            <li>Multi-platform prompt compatibility</li>
+            <li>SEO-optimized product pages</li>
+            <li>Secure payment infrastructure</li>
+            <li>Automated digital delivery</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Future Roadmap</h2>
+        <p>Development priorities include expanding the prompt library across new categories, introducing advanced search and filtering capabilities, implementing user reviews and ratings, and building AI-powered prompt testing tools to validate quality before publication.</p>
+        <p>Long-term plans involve creating a collaborative environment where creators can iterate on existing prompts, fork workflows, and contribute to a shared knowledge base that accelerates AI adoption across industries.</p>
+    </section>
+
+    <div class="section">
+        <div class="ecosystem-box">
+            <h3>Part of the Auric Ecosystem</h3>
+            <p>Mintprompt is one of several products built and operated by Auric LLC.</p>
+            <a href="index.html">Explore more products →</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Auric LLC © 2026</p>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
