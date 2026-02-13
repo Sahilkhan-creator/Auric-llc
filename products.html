@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Auric LLC</title>
+    <meta name="description" content="Explore the innovative technology products built by Auric LLC.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(108, 59, 255, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #6C3BFF;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #6C3BFF;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 3rem 2rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid rgba(108, 59, 255, 0.15);
+            border-radius: 16px;
+            padding: 2.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(108, 59, 255, 0.25);
+            border-color: #6C3BFF;
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .product-status {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .status-live {
+            background: rgba(34, 197, 94, 0.1);
+            color: #16a34a;
+        }
+
+        .status-development {
+            background: rgba(59, 130, 246, 0.1);
+            color: #2563eb;
+        }
+
+        .status-research {
+            background: rgba(168, 85, 247, 0.1);
+            color: #9333ea;
+        }
+
+        .status-concept {
+            background: rgba(251, 146, 60, 0.1);
+            color: #ea580c;
+        }
+
+        .product-link {
+            color: #6C3BFF;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .product-link:after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-link:after {
+            transform: translateX(5px);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(108, 59, 255, 0.03);
+            border-top: 1px solid rgba(108, 59, 255, 0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer p {
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Auric LLC</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" style="color: #6C3BFF;">Products</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Our Products</h1>
+        <p>Innovative technology solutions built to scale and shape the future.</p>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="products-grid">
+            
+            <a href="mintprompt.html" class="product-card">
+                <div class="product-icon">🎨</div>
+                <h3 class="product-name">Mintprompt</h3>
+                <span class="product-status status-live">Live</span>
+                <p class="product-description">AI prompt marketplace connecting creators with buyers. A curated platform for discovering, sharing, and monetizing AI workflows, automation templates, and creative prompts across multiple AI platforms.</p>
+                <span class="product-link">Learn more</span>
+            </a>
+
+            <a href="whisperlink.html" class="product-card">
+                <div class="product-icon">📡</div>
+                <h3 class="product-name">WhisperLink</h3>
+                <span class="product-status status-research">Research</span>
+                <p class="product-description">Offline mesh communication protocol enabling device-to-device messaging without internet infrastructure. Built for resilience, privacy, and decentralized communication networks.</p>
+                <span class="product-link">Learn more</span>
+            </a>
+
+            <a href="coreai.html" class="product-card">
+                <div class="product-icon">🧠</div>
+                <h3 class="product-name">Core AI</h3>
+                <span class="product-status status-development">In Development</span>
+                <p class="product-description">Foundational AI architecture powering intelligent systems across the Auric ecosystem. A modular platform for building, training, and deploying custom AI models at scale.</p>
+                <span class="product-link">Learn more</span>
+            </a>
+
+            <a href="auricvault.html" class="product-card">
+                <div class="product-icon">🔐</div>
+                <h3 class="product-name">Auric Vault</h3>
+                <span class="product-status status-research">Research</span>
+                <p class="product-description">Privacy-first encrypted storage system with zero-knowledge architecture for secure data management. End-to-end encryption with client-side key management.</p>
+                <span class="product-link">Learn more</span>
+            </a>
+
+            <a href="quietmode.html" class="product-card">
+                <div class="product-icon">⏰</div>
+                <h3 class="product-name">QuietMode Scheduler</h3>
+                <span class="product-status status-development">In Development</span>
+                <p class="product-description">Intelligent scheduling system for focus management, meetings, and productivity optimization. AI-powered calendar that understands your work patterns and protects deep work time.</p>
+                <span class="product-link">Learn more</span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Auric LLC © 2026</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

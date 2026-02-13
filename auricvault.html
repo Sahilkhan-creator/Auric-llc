@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auric Vault - Auric LLC</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #1a1a1a; line-height: 1.6; }
+        .navbar { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(108,59,255,0.1); z-index: 1000; transition: all 0.3s; }
+        .navbar.scrolled { background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); box-shadow: 0 4px 30px rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #6C3BFF; text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: #1a1a1a; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #6C3BFF; }
+        .product-hero { padding: 9rem 2rem 5rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .product-icon { font-size: 5rem; margin-bottom: 1.5rem; }
+        .product-hero h1 { font-size: 4rem; font-weight: 800; margin-bottom: 1rem; }
+        .product-hero p { font-size: 1.4rem; color: #666; margin-bottom: 2rem; }
+        .status-badge { display: inline-block; padding: 0.6rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 600; background: rgba(168,85,247,0.1); color: #9333ea; }
+        .section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+        .section h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; }
+        .section p { font-size: 1.1rem; color: #333; line-height: 1.8; margin-bottom: 1.5rem; }
+        .feature-list { list-style: none; margin: 2rem 0; }
+        .feature-list li { padding: 1rem 0; border-bottom: 1px solid rgba(108,59,255,0.1); font-size: 1.05rem; }
+        .feature-list li:before { content: '✓'; color: #6C3BFF; font-weight: bold; margin-right: 1rem; }
+        .ecosystem-box { background: rgba(108,59,255,0.05); border: 1px solid rgba(108,59,255,0.2); border-radius: 16px; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .ecosystem-box h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #6C3BFF; }
+        .ecosystem-box a { color: #6C3BFF; text-decoration: none; font-weight: 600; }
+        .footer { background: rgba(108,59,255,0.03); border-top: 1px solid rgba(108,59,255,0.1); padding: 3rem 2rem; text-align: center; margin-top: 5rem; }
+        @media (max-width: 768px) { .nav-links { display: none; } .product-hero h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Auric LLC</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="product-hero">
+        <div class="product-icon">🔐</div>
+        <h1>Auric Vault</h1>
+        <p>Privacy-First Encrypted Storage</p>
+        <span class="status-badge">Research</span>
+    </section>
+    <section class="section">
+        <h2>About Auric Vault</h2>
+        <p>Auric Vault is a privacy-first encrypted storage system built on zero-knowledge architecture principles. The platform ensures that only users have access to their data—not Auric, not third parties, not even in the event of a breach or legal demand.</p>
+        <p>All encryption and decryption happens client-side using keys that never leave the user's device. The server stores only encrypted blobs that are mathematically useless without the user's private key, creating a security model where trust in the service provider is minimized.</p>
+    </section>
+    <section class="section">
+        <h2>Purpose & Technology</h2>
+        <p>Auric Vault addresses growing concerns about data privacy, surveillance, and unauthorized access to personal information. Traditional cloud storage requires trusting providers with unencrypted data. Auric Vault eliminates this trust requirement through cryptographic guarantees.</p>
+        <p>The system employs industry-standard encryption algorithms combined with modern key derivation functions, ensuring data remains secure even against future computational advances. User experience is prioritized—security happens automatically without requiring cryptography expertise.</p>
+        <ul class="feature-list">
+            <li>Zero-knowledge architecture</li>
+            <li>Client-side encryption/decryption</li>
+            <li>No server-side data access</li>
+            <li>Secure key derivation and management</li>
+            <li>Cross-device synchronization</li>
+            <li>Audit trails and version history</li>
+        </ul>
+    </section>
+    <section class="section">
+        <h2>Future Roadmap</h2>
+        <p>Research priorities include implementing post-quantum cryptographic algorithms, developing secure sharing mechanisms for encrypted data, building audit tools for security verification, and creating seamless recovery systems that maintain zero-knowledge guarantees.</p>
+        <p>Long-term vision involves establishing Auric Vault as the secure storage layer for sensitive data across all Auric products, with cryptographic isolation between applications and user-controlled access permissions.</p>
+    </section>
+    <div class="section">
+        <div class="ecosystem-box">
+            <h3>Part of the Auric Ecosystem</h3>
+            <p>Auric Vault is one of several products built and operated by Auric LLC.</p>
+            <a href="index.html">Explore more products →</a>
+        </div>
+    </div>
+    <footer class="footer"><p>Auric LLC © 2026</p></footer>
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+    </script>
+</body>
+</html>

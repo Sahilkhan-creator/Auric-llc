@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auric LLC - Building the Future Through Intelligent Technology</title>
+    <meta name="description" content="Auric LLC is a technology company focused on AI, automation, and next-generation digital infrastructure.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(108, 59, 255, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #6C3BFF;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #6C3BFF;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #6C3BFF;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a2edb;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(108, 59, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #6C3BFF;
+            border: 2px solid #6C3BFF;
+        }
+
+        .btn-secondary:hover {
+            background: #6C3BFF;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Section */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        .about-content {
+            background: rgba(108, 59, 255, 0.03);
+            border: 1px solid rgba(108, 59, 255, 0.1);
+            border-radius: 16px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Leadership Section */
+        .leadership-card {
+            background: white;
+            border: 1px solid rgba(108, 59, 255, 0.15);
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .leadership-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(108, 59, 255, 0.15);
+        }
+
+        .leader-name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .leader-brand {
+            font-size: 1.2rem;
+            color: #6C3BFF;
+            margin-bottom: 0.5rem;
+        }
+
+        .leader-title {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .leader-bio {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid rgba(108, 59, 255, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(108, 59, 255, 0.2);
+            border-color: #6C3BFF;
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .product-status {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status-live {
+            background: rgba(34, 197, 94, 0.1);
+            color: #16a34a;
+        }
+
+        .status-development {
+            background: rgba(59, 130, 246, 0.1);
+            color: #2563eb;
+        }
+
+        .status-research {
+            background: rgba(168, 85, 247, 0.1);
+            color: #9333ea;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(108, 59, 255, 0.03);
+            border-top: 1px solid rgba(108, 59, 255, 0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .footer p {
+            color: #666;
+        }
+
+        /* Fade In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Auric LLC</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Building the Future Through Intelligent Technology.</h1>
+        <p>Auric LLC is a technology company focused on AI, automation, and next-generation digital infrastructure.</p>
+        <div class="hero-buttons">
+            <a href="products.html" class="btn btn-primary">Explore Products</a>
+            <a href="vision.html" class="btn btn-secondary">View Vision</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section fade-in">
+        <h2 class="section-title">About Auric</h2>
+        <p class="section-subtitle">A technology parent company building scalable digital products</p>
+        <div class="about-content">
+            <p>Auric LLC operates as a technology parent company focused on building and operating innovative digital products. We don't sell services—we build intelligent software systems designed to scale.</p>
+            <p>Our approach centers on creating independent products that leverage artificial intelligence, automation, and advanced infrastructure. Each product under the Auric umbrella is developed to operate autonomously while contributing to a larger ecosystem of interconnected technology.</p>
+            <p>We believe in building for the long term, investing in research, and developing products that push the boundaries of what's possible in digital technology.</p>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="section fade-in">
+        <h2 class="section-title">Leadership</h2>
+        <div class="leadership-card">
+            <h3 class="leader-name">Sahil Khan</h3>
+            <p class="leader-brand">mvtsahil</p>
+            <p class="leader-title">CEO & Founder of Auric LLC</p>
+            <p class="leader-bio">Sahil Khan, known as mvtsahil, is the Founder and CEO of Auric LLC. He focuses on building intelligent software ecosystems centered around AI, automation, and advanced digital infrastructure. His mission is to develop scalable technology products that shape the future of communication and computing.</p>
+        </div>
+    </section>
+
+    <!-- Products Preview Section -->
+    <section class="section fade-in">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-subtitle">Innovative technology solutions built for the future</p>
+        <div class="products-grid">
+            
+            <a href="mintprompt.html" class="product-card">
+                <h3 class="product-name">Mintprompt</h3>
+                <p class="product-description">AI prompt marketplace connecting creators with buyers. A platform for discovering, sharing, and monetizing AI workflows.</p>
+                <span class="product-status status-live">Live</span>
+            </a>
+
+            <a href="whisperlink.html" class="product-card">
+                <h3 class="product-name">WhisperLink</h3>
+                <p class="product-description">Offline mesh communication protocol enabling device-to-device messaging without internet infrastructure.</p>
+                <span class="product-status status-research">Research</span>
+            </a>
+
+            <a href="coreai.html" class="product-card">
+                <h3 class="product-name">Core AI</h3>
+                <p class="product-description">Foundational AI architecture powering intelligent systems across the Auric ecosystem.</p>
+                <span class="product-status status-development">In Development</span>
+            </a>
+
+            <a href="auricvault.html" class="product-card">
+                <h3 class="product-name">Auric Vault</h3>
+                <p class="product-description">Privacy-first encrypted storage system with zero-knowledge architecture for secure data management.</p>
+                <span class="product-status status-research">Research</span>
+            </a>
+
+            <a href="quietmode.html" class="product-card">
+                <h3 class="product-name">QuietMode Scheduler</h3>
+                <p class="product-description">Intelligent scheduling system for focus management, meetings, and productivity optimization.</p>
+                <span class="product-status status-development">In Development</span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Auric LLC © 2026</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+    </script>
+</body>
+</html>

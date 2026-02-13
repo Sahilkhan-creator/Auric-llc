@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates - Auric LLC</title>
+    <meta name="description" content="Latest updates and announcements from Auric LLC.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(108, 59, 255, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #6C3BFF;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #6C3BFF;
+        }
+
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .updates-section {
+            padding: 3rem 2rem 5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .updates-grid {
+            display: grid;
+            gap: 2.5rem;
+        }
+
+        .update-card {
+            background: white;
+            border: 1px solid rgba(108, 59, 255, 0.15);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .update-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(108, 59, 255, 0.15);
+            border-color: #6C3BFF;
+        }
+
+        .update-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .update-date {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .update-category {
+            background: rgba(108, 59, 255, 0.1);
+            color: #6C3BFF;
+            padding: 0.3rem 1rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .update-card h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .update-card p {
+            font-size: 1.05rem;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background: rgba(108, 59, 255, 0.03);
+            border-top: 1px solid rgba(108, 59, 255, 0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer p {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .update-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Auric LLC</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="updates.html" style="color: #6C3BFF;">Updates</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Updates</h1>
+        <p>Latest announcements and progress from the Auric ecosystem.</p>
+    </section>
+
+    <section class="updates-section">
+        <div class="updates-grid">
+            
+            <article class="update-card">
+                <div class="update-meta">
+                    <span class="update-date">February 10, 2026</span>
+                    <span class="update-category">Product Launch</span>
+                </div>
+                <h2>Mintprompt Platform Expansion</h2>
+                <p>Mintprompt has officially launched with a curated library of AI prompts and workflows. The platform now features over 70 high-quality prompts spanning categories from automation to creative writing, all manually reviewed for quality.</p>
+                <p>Early creator feedback has been overwhelmingly positive, with particular appreciation for the 100% revenue model and dedicated product pages. We're seeing strong engagement from both creators and buyers across multiple AI platforms including ChatGPT, Claude, and custom implementations.</p>
+                <p>Next phase focuses on expanding search capabilities, implementing user reviews, and building AI-powered testing tools to validate prompt quality before publication. We're also exploring collaborative features that enable creators to iterate on existing workflows and contribute to a shared knowledge base.</p>
+            </article>
+
+            <article class="update-card">
+                <div class="update-meta">
+                    <span class="update-date">February 5, 2026</span>
+                    <span class="update-category">Research</span>
+                </div>
+                <h2>WhisperLink Testing Phase Begins</h2>
+                <p>WhisperLink has entered initial testing phase with a small group of developers evaluating the mesh communication protocol. Early results demonstrate successful message relay across up to 5 hops with acceptable latency for text-based communication.</p>
+                <p>Battery consumption data shows promise—devices can maintain mesh participation for 8+ hours under typical usage patterns. Encryption overhead remains minimal, with end-to-end security maintained across all relay nodes without compromising routing efficiency.</p>
+                <p>Current focus areas include optimizing routing algorithms for larger networks, implementing automatic network healing when nodes disappear, and reducing discovery time for new participants joining the mesh. We're targeting expanded testing with 50+ simultaneous participants by end of Q1.</p>
+            </article>
+
+            <article class="update-card">
+                <div class="update-meta">
+                    <span class="update-date">January 28, 2026</span>
+                    <span class="update-category">Development</span>
+                </div>
+                <h2>Core AI Architecture Planning</h2>
+                <p>Core AI development has progressed to architecture design phase, with foundational decisions made regarding model orchestration, resource allocation, and deployment patterns. The platform will support both cloud and on-premise deployment scenarios with unified management interfaces.</p>
+                <p>Key architectural principles include modularity (enabling mix-and-match of components), scalability (handling growth from prototype to production), and cost efficiency (optimizing compute allocation based on workload characteristics). We're prioritizing developer experience with simple APIs that abstract infrastructure complexity.</p>
+                <p>Initial implementation will focus on inference optimization for existing models before expanding to training capabilities. Integration points with Mintprompt are being designed to enable AI-powered prompt testing and validation workflows.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Auric LLC © 2026</p>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

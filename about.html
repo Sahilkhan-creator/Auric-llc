@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Auric LLC</title>
+    <meta name="description" content="Learn about Auric LLC, our mission, and our approach to building technology products.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(108, 59, 255, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #6C3BFF;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #6C3BFF;
+        }
+
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .value-card {
+            background: rgba(108, 59, 255, 0.03);
+            border: 1px solid rgba(108, 59, 255, 0.15);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            background: rgba(108, 59, 255, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #1a1a1a;
+        }
+
+        .value-card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .founder-box {
+            background: white;
+            border: 1px solid rgba(108, 59, 255, 0.2);
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .founder-box h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #6C3BFF;
+        }
+
+        .footer {
+            background: rgba(108, 59, 255, 0.03);
+            border-top: 1px solid rgba(108, 59, 255, 0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .footer p {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Auric LLC</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="about.html" style="color: #6C3BFF;">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>About Auric</h1>
+        <p>A forward-thinking technology company building intelligent digital ecosystems.</p>
+    </section>
+
+    <section class="section">
+        <h2>Who We Are</h2>
+        <p>Auric LLC is a technology parent company focused on building and operating innovative digital products. We don't sell services—we build intelligent software systems designed to scale independently and contribute to a larger ecosystem of interconnected technology.</p>
+        <p>Our approach centers on creating autonomous products that leverage artificial intelligence, automation, and advanced infrastructure. Each product operates as an independent entity while benefiting from shared technology, research, and operational excellence across the Auric portfolio.</p>
+    </section>
+
+    <section class="section">
+        <h2>Mission</h2>
+        <p>We exist to build technology that enhances human capability without compromising privacy, autonomy, or independence. Our products prioritize user control, data ownership, and transparent operation over growth metrics and engagement optimization.</p>
+        <p>Auric operates on the principle that sustainable technology businesses are built through product excellence and genuine value creation—not through data exploitation, attention manipulation, or artificial lock-in.</p>
+    </section>
+
+    <section class="section">
+        <h2>Core Values</h2>
+        <div class="values-grid">
+            
+            <div class="value-card">
+                <div class="value-icon">🎯</div>
+                <h3>Long-Term Focus</h3>
+                <p>We build for decades, not quarters. Products are designed for sustainability and continuous improvement.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">🔒</div>
+                <h3>Privacy First</h3>
+                <p>User data belongs to users. We architect systems where privacy is guaranteed by design, not policy.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">⚡</div>
+                <h3>Technical Excellence</h3>
+                <p>Quality code, thoughtful architecture, and reliable systems are non-negotiable standards.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">🌱</div>
+                <h3>Sustainable Growth</h3>
+                <p>Profitability through value creation, not exploitation. Economics that scale without compromising principles.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">🔬</div>
+                <h3>Research Driven</h3>
+                <p>Innovation requires investigation. We invest in understanding problems deeply before building solutions.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">🛠️</div>
+                <h3>Builder Mentality</h3>
+                <p>Ship products, iterate based on reality, and continuously improve. Theory matters less than working software.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Long-Term Goals</h2>
+        <p>Over the next decade, Auric aims to establish a portfolio of profitable, independently operating products that collectively form a comprehensive technology ecosystem. Each product addresses a specific need while contributing data, learnings, and infrastructure to the broader system.</p>
+        <p>We're building toward a future where users control their data, communication happens without corporate intermediaries, automation eliminates drudgery without eliminating jobs, and artificial intelligence augments human capability rather than replacing it.</p>
+        <p>Success means products that remain operational and valuable for decades, not products that scale rapidly and burn out. We optimize for longevity, user trust, and sustainable economics.</p>
+    </section>
+
+    <section class="section">
+        <div class="founder-box">
+            <h3>Founder</h3>
+            <p style="font-size: 1.1rem; color: #333; line-height: 1.8;">Founded by Sahil Khan (mvtsahil), Auric LLC operates as an independent technology innovation company. Sahil's background in software development, systems architecture, and product building informs Auric's technical-first approach to creating scalable digital products.</p>
+            <p style="font-size: 1.1rem; color: #333; line-height: 1.8; margin-top: 1rem;">The company maintains lean operations focused on product development rather than organizational overhead—prioritizing engineering quality and user value over traditional corporate structures.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Auric LLC © 2026</p>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
